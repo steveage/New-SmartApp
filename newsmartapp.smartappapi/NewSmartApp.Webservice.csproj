@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+    <UserSecretsId>6c53dd6c-28de-477e-b682-f1eda7c7af9f</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Properties\PublishProfiles\**" />
+    <Compile Remove="SampleRequests\**" />
+    <Content Remove="Properties\PublishProfiles\**" />
+    <Content Remove="SampleRequests\**" />
+    <EmbeddedResource Remove="Properties\PublishProfiles\**" />
+    <EmbeddedResource Remove="SampleRequests\**" />
+    <None Remove="Properties\PublishProfiles\**" />
+    <None Remove="SampleRequests\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="ProgressComments.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.AspNetCore.NodeServices" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.AzureKeyVault" Version="2.2.0" />
+  </ItemGroup>
+
+</Project>
