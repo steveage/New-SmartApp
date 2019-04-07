@@ -3,6 +3,6 @@
   "name": "asp.net",
   "private": true,
   "devDependencies": {
-    "http-signature": "1.2.0"
+    "http-signature": "^1.2.0"
   }
 }

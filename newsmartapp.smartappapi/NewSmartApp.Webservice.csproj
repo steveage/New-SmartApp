@@ -7,13 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Properties\PublishProfiles\**" />
     <Compile Remove="SampleRequests\**" />
-    <Content Remove="Properties\PublishProfiles\**" />
     <Content Remove="SampleRequests\**" />
-    <EmbeddedResource Remove="Properties\PublishProfiles\**" />
     <EmbeddedResource Remove="SampleRequests\**" />
-    <None Remove="Properties\PublishProfiles\**" />
     <None Remove="SampleRequests\**" />
   </ItemGroup>
 
