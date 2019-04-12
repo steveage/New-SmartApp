@@ -5,6 +5,12 @@ DotNet SmartApp is a web application which works as a webhook endpoint. written 
 
 ![Automation Selection Screenshot](Screenshots/Automation.jpg?raw=true "Automation Selection")
 
+![Install First Page Screenshot](Screenshots/Install_First_Page.jpg?raw=true "First page of automation installation")
+
+![Authorization Screenshot](Screenshots/Permissions.jpg?raw=true "Setting device permissions")
+
+![Install Last Page Screenshot](Screenshots/Sensor_Selection.jpg?raw=true "Sensor selection")
+
 ## Getting Started
 
 Here is all you need to know about getting a copy of the project to your computer. Please refer to the deployment section when you are ready to deploy the project.
