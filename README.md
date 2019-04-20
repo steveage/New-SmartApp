@@ -6,9 +6,9 @@ New-SmartApp is a sample ASP.Net Core application that demonstrates how to write
 
 ![Install First Page Screenshot](Screenshots/Install_First_Page.jpg?raw=true "First page of automation installation")
 
-![Authorization Screenshot](Screenshots/Permissions.jpg?raw=true "Setting device permissions")
-
 ![Install Last Page Screenshot](Screenshots/Sensor_Selection.jpg?raw=true "Sensor selection")
+
+![Authorization Screenshot](Screenshots/Permissions.jpg?raw=true "Setting device permissions")
 
 This application is based on the [Weather Color Light SmartApp](https://github.com/SmartThingsCommunity/weather-color-light-smartapp-nodejs)  Node.js sample referenced on the [Getting Started](https://smartthings.developer.samsung.com/docs/getting-started/automation.html) documentation section of [SmartThings Developers](https://smartthings.developer.samsung.com/docs/index.html) website.
 
