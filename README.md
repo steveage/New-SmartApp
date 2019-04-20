@@ -12,6 +12,8 @@ New-SmartApp is a sample ASP.Net Core application that demonstrates how to write
 
 This application is based on the [Weather Color Light SmartApp](https://github.com/SmartThingsCommunity/weather-color-light-smartapp-nodejs)  Node.js sample referenced on the [Getting Started](https://smartthings.developer.samsung.com/docs/getting-started/automation.html) documentation section of [SmartThings Developers](https://smartthings.developer.samsung.com/docs/index.html) website.
 
+The application is an ASP.Net Core webhook hosted in Azure that receives and sends requests to SmartThings cloud where the automation connector is registered. 
+
 Welcome. Do you happen to own a SmartThings hub in your home and ever wondered how to write an application for it? DotNet-SmartApp is a sample application that connects you to your SmartThings hub. With that the world is a limit. You can create a custom automation that could not be built with your SmartThings app on your phone. You can log the device events that are captured in the hub or display them on a dashboard.
 DotNet SmartApp is a web application which works as a webhook endpoint. written in ASP.Net Core that captures the events from a contact sensor connected to your hub.
 
