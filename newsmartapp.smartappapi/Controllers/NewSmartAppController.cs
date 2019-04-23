@@ -12,6 +12,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.NodeServices;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 
 namespace NewSmartApp.Webservice.Controllers
@@ -23,12 +24,14 @@ namespace NewSmartApp.Webservice.Controllers
         readonly INodeServices nodeServices;
         readonly IConfiguration configuration;
         readonly IHostingEnvironment environment;
+        readonly ILogger<NewSmartAppController> logger;
 
-        public NewSmartAppController(INodeServices nodeServices, IConfiguration configuration, IHostingEnvironment environment)
+        public NewSmartAppController(INodeServices nodeServices, IConfiguration configuration, IHostingEnvironment environment, ILogger<NewSmartAppController> logger)
         {
             this.nodeServices = nodeServices;
             this.configuration = configuration;
             this.environment = environment;
+            this.logger = logger;
         }
         // GET api/NewSmartApp
         [HttpGet]
@@ -78,7 +81,8 @@ namespace NewSmartApp.Webservice.Controllers
             
             if (requestIsVerified)
             {
-                result = await ProcessVerifiedLifecyle(lifecycleType, requestBody);
+                logger.LogInformation("Received verified lifecycle request.");
+                result = await ProcessVerifiedLifecycle(lifecycleType, requestBody);
             }
             else
             {
@@ -88,7 +92,7 @@ namespace NewSmartApp.Webservice.Controllers
             return result;
         }
 
-        async Task<IActionResult> ProcessVerifiedLifecyle(string lifecycleType, string requestBody)
+        async Task<IActionResult> ProcessVerifiedLifecycle(string lifecycleType, string requestBody)
         {
             IActionResult result;
             switch (lifecycleType)
@@ -149,6 +153,7 @@ namespace NewSmartApp.Webservice.Controllers
 
         void ProcessDeviceEvent(DeviceEvent deviceEvent)
         {
+            logger.LogInformation($"Received SmartThings device event {deviceEvent.EventId} for device {deviceEvent.DeviceId} containing the following value: {deviceEvent.Value}.");
             Debug.Print(deviceEvent.Attribute);
             Debug.Print(deviceEvent.Capability);
             Debug.Print(deviceEvent.ComponentId);
