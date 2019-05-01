@@ -10,6 +10,8 @@ New-SmartApp is a sample ASP.Net Core application that demonstrates how to write
 
 ![Authorization Screenshot](Screenshots/Permissions.jpg?raw=true "Setting device permissions")
 
+![Logged Event Screenshot](Screenshots/Log_Result.PNG?raw=true "Event logged in Azure Application Insights")
+
 This application is based on the [Weather Color Light SmartApp](https://github.com/SmartThingsCommunity/weather-color-light-smartapp-nodejs)  Node.js sample referenced on the [Getting Started](https://smartthings.developer.samsung.com/docs/getting-started/automation.html) documentation section of [SmartThings Developers](https://smartthings.developer.samsung.com/docs/index.html) website.
 
 The application is an ASP.Net Core webhook hosted in Azure that receives and sends requests to SmartThings cloud where the automation connector is registered. 
