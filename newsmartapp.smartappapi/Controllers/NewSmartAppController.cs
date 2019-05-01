@@ -72,20 +72,25 @@ namespace NewSmartApp.Webservice.Controllers
             }
             else
             {
-                string pubKey = configuration["PublicKey"].Replace("*", "\r\n");
-                string signingString = $"(request-target): post /api/values\ndigest: {digestHeader}\ndate: {dateHeader}";
+                string method = HttpContext.Request.Method.ToLower();
+                string route = HttpContext.Request.Path.Value;
+                string signingString = $"(request-target): {method} {route}\ndigest: {digestHeader}\ndate: {dateHeader}";
                 string myKeyId = authorizationHeader.Substring(17, 60);
+                string maskedPubKey = configuration["PublicKey"];
+                string pubKey = maskedPubKey.Replace("*", "\r\n");
                 string mySignature = authorizationHeader.Substring(90, 344);
+
                 requestIsVerified = await nodeServices.InvokeAsync<bool>("./Node/VerifyProxy.js", myKeyId, mySignature, signingString, pubKey);
             }
             
             if (requestIsVerified)
             {
-                logger.LogInformation("Received verified lifecycle request.");
+                logger.LogInformation("Hello from New-SmartApp! Received verified lifecycle request.");
                 result = await ProcessVerifiedLifecycle(lifecycleType, requestBody);
             }
             else
             {
+                logger.LogWarning("Request was not authorized.");
                 result = Unauthorized();
             }
 
