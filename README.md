@@ -68,14 +68,15 @@ ngrok http 53869 -host-header="localhost:53869"
 
 #### Connecting the app to SmartThings Cloud
 1. Log in to developer account.
-2. Create automation by following instructions on [Develop Automation] (https://smartthings.developer.samsung.com/docs/workspace/tutorials/create-an-automation.html) section of SmartThings documentation.
-1.1 Select webhook instead of AWS.
-1.2 Enter address from Ngrok (ngrok screenshot here).
-1.3 Copy the public key displayed when you click Save. You will need it for request verifications.
-1.4 Stop the application.
-1.5 Stop Ngrok.
-1.6 Add the public key application configuration or in this case to Azure Key Vault secret.
-1.5 Start Ngrok and the application.
+2. Create automation by following instructions on [Develop Automation](https://smartthings.developer.samsung.com/docs/workspace/tutorials/create-an-automation.html) section of SmartThings documentation.
+2.1 Select webhook instead of AWS.
+2.2 Enter address from Ngrok.
+![Ngrok Screenshot](Screenshots/Ngrok.png?raw=true "Ngrok")
+2.3 Copy the public key displayed when you click Save. You will need it for request verifications.
+2.4 Stop the application.
+2.5 Stop Ngrok.
+2.6 Add the public key application configuration or in this case to Azure Key Vault secret.
+2.5 Start Ngrok and the application.
 
 #### Enabling test mode
 
