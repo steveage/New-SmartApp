@@ -20,7 +20,7 @@ The main goal of the application was to keep it as simple as possible. The inten
 Keeping the functionality of the application at minimum focuses on showing the building blocks of establishing communication with SmartThings.
 
 ## Specifics
-* The application was written using Visual Studio ASP.Net Core Web API project template.
+* The application is written using Visual Studio ASP.Net Core Web API project template.
 * The applicaiton is based on .Net Core 2.2.
 * The application is based on strongly typed SmartThings lifecycle objects located in Models subfolder.
 * The application is hosted in Azure App Service.
@@ -61,14 +61,14 @@ git clone https://github.com/steveage/New-SmartApp.git
 
 #### Exposing the app to the web
 1. Start the app from Visual Studio.
-2. Start Ngrok and enter the following command replaceing the port number with the port number the application uses.
+2. Start Ngrok and enter the following command replaceing 53869 with the port number the application uses.
 ```
 ngrok http 53869 -host-header="localhost:53869"
 ```
 
 #### Connecting the app to SmartThings Cloud
 1. Log in to developer account.
-2. Create automation by following instructions on [Develop Automation](https://smartthings.developer.samsung.com/docs/workspace/tutorials/create-an-automation.html) section of SmartThings documentation.
+2. Create automation on  Developer Workspace by following instructions on [Develop Automation](https://smartthings.developer.samsung.com/docs/workspace/tutorials/create-an-automation.html) section of SmartThings documentation.
 2.1 Select webhook instead of AWS.
 2.2 Enter address from Ngrok.
 ![Ngrok Screenshot](Screenshots/Ngrok.PNG?raw=true "Ngrok")
@@ -102,3 +102,28 @@ Follow the steps below to deploy and set up your solution in Azure.
 ### Running the App.
 ### Enable developer mode
 Use it for troubleshooting.
+
+
+
+Chronological list of tasks to create and deploy the automation.
+I. Create
+1. Clone the solution.
+2. Open the solution in Visual Studio.
+3. Start the application (F5).
+4. Create SmartThings developer account.
+5. Create automation in developer workspace.
+6. Save with webhook option and https address copied from Ngrok.
+7. Add automation from SmartThings app installed on your phone.
+8. Select contact sensor during automation installation.
+Once automation installation is completed successfully
+
+II. Deploy
+1. Create App service in Azure Portal.
+2. Copy the deployment address.
+3. Right click on the project and select Publish...
+4. Use the address in the publish profile.
+5. 
+
+Optional:
+1. Enable developer mode to view live logging if necessary.
+
