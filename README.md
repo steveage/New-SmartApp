@@ -107,7 +107,19 @@ Use it for troubleshooting.
 
 Chronological list of tasks to create and deploy the automation.
 I. Create
-1. Clone the solution.
+1. Download files
+1.1 Clone solution
+Type in the following in Bash
+```
+git clone https://github.com/steveage/New-SmartApp.git
+```
+1.2 Install Node dependencies
+```
+cd New-SmartApp/newsmartapp.smartappapi
+npm install
+```
+2. Open the solution from Visual Studio and run the application (F5).
+
 2. Open the solution in Visual Studio.
 3. Start the application (F5).
 4. Create SmartThings developer account.
