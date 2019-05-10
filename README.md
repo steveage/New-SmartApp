@@ -119,6 +119,28 @@ cd New-SmartApp/newsmartapp.smartappapi
 npm install
 ```
 2. Open the solution from Visual Studio and run the application (F5).
+3. Create a tunnel that will expose your application to SmartThings for testing and debugging.
+Start Ngrok and enter the following command replaceing 53869 with the port number the application uses.
+```
+ngrok http 53869 -host-header="localhost:53869"
+```
+4. Copy the https address.
+![Ngrok Screenshot](Screenshots/Ngrok.PNG?raw=true "Ngrok")
+5. Create automation in SmartThings. The process is explained in the [Developer Workspace documentation](https://smartthings.developer.samsung.com/docs/workspace/tutorials/create-an-automation.html).
+5.1 Log in the [Developer Workspace](https://smartthings.developer.samsung.com/workspace/).
+5.2 Create automation project and open it.
+5.3 Click on Automation under Develop section on the right.
+5.4 Select the Webhook Endpoint, paste the https address from Ngrok and click Next.
+(screenshot here).
+5.5 Select read and update device scopes and click Next.
+(screenshot here).
+5.6 Enter the name for your automation and click Save.
+(screenshot here)
+5.7 At this point SmartThings will send PING lifecycle POST request. Once the application responds properly you should see connecton save confirmation with public key. Copy the key. You will need it verify the incomming requests from SmartThings. The key will be securely stored in Azure Key Vault in the next section. When debugging the application locally with Ngrok you can use this key directly in the controller.
+(screenshot here).
+
+
+
 
 2. Open the solution in Visual Studio.
 3. Start the application (F5).
