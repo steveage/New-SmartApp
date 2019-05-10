@@ -131,13 +131,16 @@ ngrok http 53869 -host-header="localhost:53869"
 5.2 Create automation project and open it.
 5.3 Click on Automation under Develop section on the right.
 5.4 Select the Webhook Endpoint, paste the https address from Ngrok and click Next.
-(screenshot here).
+![Developer Workspace Hosting](Screenshots/Developer_Workspace_Hosting.PNG?raw=true "Setting up automation hosting.")
+
 5.5 Select read and update device scopes and click Next.
-(screenshot here).
+![Developer Workspace Scopes](Screenshots/Developer_Workspace_AppScope.PNG?raw=true "Selecting device scopes.")
+
 5.6 Enter the name for your automation and click Save.
-(screenshot here)
+![Developer Workspace Settings](Screenshots/Developer_Workspace_AppSettings.PNG?raw=true "Automation settings.")
+
 5.7 At this point SmartThings will send PING lifecycle POST request. Once the application responds properly you should see connecton save confirmation with public key. Copy the key. You will need it verify the incomming requests from SmartThings. The key will be securely stored in Azure Key Vault in the next section. When debugging the application locally with Ngrok you can use this key directly in the controller.
-(screenshot here).
+![Public Key Controller](Screenshots/Contoller_PublicKey.PNG?raw=true "Public key location in controller.")
 
 
 
