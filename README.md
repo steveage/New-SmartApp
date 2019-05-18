@@ -110,44 +110,47 @@ I. Create
 1. Download files
 1.1 Clone solution
 ## Get the app
-l. 1. Type in the following in Bash
+1. Type in the following in Bash
 ```
 git clone https://github.com/steveage/New-SmartApp.git
 ```
-l. 2. Install Node dependencies
+2. Install Node dependencies
 ```
 cd New-SmartApp/newsmartapp.smartappapi
 npm install
 ```
 ## Starting the app
-l. 1. Open the solution from Visual Studio and run the application (F5).
-l. 2. Create a tunnel that will expose your application to SmartThings for testing and debugging.
+1. Open the solution from Visual Studio and run the application (F5).
+2. Create a tunnel that will expose your application to SmartThings for testing and debugging.
 Start Ngrok and enter the following command.
 ```
 ngrok http 53869 -host-header="localhost:53869"
 ```
-l. 3. Copy the https address. You will need it in the next section.
+3. Copy the https address. You will need it in the next section.
 ![Ngrok Screenshot](Screenshots/Ngrok.PNG?raw=true "Ngrok")
 ## Register the app as an automation
 At this point your application is up and running but SmartThings does not know about it. In this section we will change that by creating an automation in SmartThings. The process is explained in the [Developer Workspace documentation](https://smartthings.developer.samsung.com/docs/workspace/tutorials/create-an-automation.html).
-l. 1. Log in the [Developer Workspace](https://smartthings.developer.samsung.com/workspace/).
-l. 2. Create automation project and open it.
-l. 3. Click on Automation under Develop section on the right.
-l. 4. Select the Webhook Endpoint, paste the https address from Ngrok and click Next.
+1. Log in the [Developer Workspace](https://smartthings.developer.samsung.com/workspace/).
+2. Create automation project and open it.
+3. Click on Automation under Develop section on the right.
+4. Select the Webhook Endpoint, paste the https address from Ngrok and click Next.
 ![Developer Workspace Hosting](Screenshots/Developer_Workspace_Hosting.PNG?raw=true "Setting up automation hosting.")
-l. 5. Select read and update device scopes and click Next.
+5. Select read and update device scopes and click Next.
 ![Developer Workspace Scopes](Screenshots/Developer_Workspace_AppScope.PNG?raw=true "Selecting device scopes.")
-l. 6. Enter the name for your automation and click Save.
+6. Enter the name for your automation and click Save.
 ![Developer Workspace Settings](Screenshots/Developer_Workspace_AppSettings.PNG?raw=true "Automation settings.")
-l. 7. When the automation is being saved, SmartThings will send PING lifecycle POST request. Once the application responds properly, you should see connecton save confirmation with public key. Copy the key. You will need it to verify the incomming requests from SmartThings. The key will be securely stored in Azure Key Vault in the next section. When debugging the application locally with Ngrok you can use this key directly in the controller.
+7. When the automation is being saved, SmartThings will send PING lifecycle POST request. Once the application responds properly, you should see connecton save confirmation with public key. Copy the key. You will need it to verify the incomming requests from SmartThings. The key will be securely stored in Azure Key Vault in the next section. When debugging the application locally with Ngrok you can use this key directly in the controller.
 ![Public Key Controller](Screenshots/Contoller_PublicKey.PNG?raw=true "Public key location in controller.")
-
 ## Install the automation
-Now we are ready to add the app to your list of automations. Provide documentation link.
-Open SmartThings app on your phone and add an automation.
-....
-
+Now we are ready to add the automation in SmartThings app. 
+1. Enable ![developer mode](https://smartthings.developer.samsung.com/docs/guides/testing/developer-mode.html#Enable-Developer-Mode "Developer Mode") that allows logging of any activity on the automation. This might be useful when troubleshooting or debugging.
+2. ![Add the automation](https://smartthings.developer.samsung.com/docs/guides/testing/developer-mode.html#Add-your-Automation "Add your Automation") to SmartThings app.
 ## Test the automation
+
+
+
+
+
 
 2. Open the solution in Visual Studio.
 3. Start the application (F5).
