@@ -143,8 +143,8 @@ At this point your application is up and running but SmartThings does not know a
 ![Public Key Controller](Screenshots/Contoller_PublicKey.PNG?raw=true "Public key location in controller.")
 ## Install the automation
 Now we are ready to add the automation in SmartThings app. 
-1. Enable ![developer mode](https://smartthings.developer.samsung.com/docs/guides/testing/developer-mode.html#Enable-Developer-Mode "Developer Mode") that allows logging of any activity on the automation. This might be useful when troubleshooting or debugging.
-2. ![Add the automation](https://smartthings.developer.samsung.com/docs/guides/testing/developer-mode.html#Add-your-Automation "Add your Automation") to SmartThings app.
+1. Enable [developer mode](https://smartthings.developer.samsung.com/docs/guides/testing/developer-mode.html#Enable-Developer-Mode "Enable Developer Mode") that allows logging of any activity on the automation. This might be useful when troubleshooting or debugging.
+2. [Add the automation](https://smartthings.developer.samsung.com/docs/guides/testing/developer-mode.html#Add-your-Automation "Add your Automation") to SmartThings app.
 ## Test the automation
 
 
