@@ -2,14 +2,6 @@
 
 New-SmartApp is a sample ASP.Net Core application that explains how to write Samsung SmarThings hub automation using the new SmartThings API. The automation provides a very basic functionality. All it does is allows user to select a contact sensor to log open and close events.
 
-![Automation Selection Screenshot](Screenshots/Automation.jpg?raw=true "Automation Selection")
-
-![Install First Page Screenshot](Screenshots/Install_First_Page.jpg?raw=true "First page of automation installation")
-
-![Install Last Page Screenshot](Screenshots/Sensor_Selection.jpg?raw=true "Sensor selection")
-
-![Authorization Screenshot](Screenshots/Permissions.jpg?raw=true "Setting device permissions")
-
 ![Logged Event Screenshot](Screenshots/Log_Result.PNG?raw=true "Event logged in Azure Application Insights")
 
 This application is based on the [Weather Color Light SmartApp](https://github.com/SmartThingsCommunity/weather-color-light-smartapp-nodejs)  Node.js sample referenced on the [Getting Started](https://smartthings.developer.samsung.com/docs/getting-started/automation.html) documentation section of [SmartThings Developers](https://smartthings.developer.samsung.com/docs/index.html) website.
@@ -17,7 +9,6 @@ This application is based on the [Weather Color Light SmartApp](https://github.c
 The application is a webhook hosted in Azure that receives and sends requests to SmartThings cloud where the automation connector is registered.
 
 The main goal of the application was to keep it as simple as possible. The intention here is to show the building blocks of establishing communication with SmartThings.
-Keeping the functionality of the application at minimum focuses on showing the building blocks of establishing communication with SmartThings.
 
 ## Specifics
 * The application is written using Visual Studio ASP.Net Core Web API project template.
@@ -109,6 +100,9 @@ Chronological list of tasks to create and deploy the automation.
 I. Create
 1. Download files
 1.1 Clone solution
+
+
+
 ## Get the app
 1. Type in the following in Bash
 ```
@@ -145,10 +139,33 @@ At this point your application is up and running but SmartThings does not know a
 Now we are ready to add the automation in SmartThings app. 
 1. Enable [developer mode](https://smartthings.developer.samsung.com/docs/guides/testing/developer-mode.html#Enable-Developer-Mode "Enable Developer Mode") that allows logging of any activity on the automation. This might be useful when troubleshooting or debugging.
 2. [Add the automation](https://smartthings.developer.samsung.com/docs/guides/testing/developer-mode.html#Add-your-Automation "Add your Automation") to SmartThings app.
-## Test the automation
 
+![Automation Selection Screenshot](Screenshots/Automation.jpg?raw=true "Automation Selection")
 
+![Install First Page Screenshot](Screenshots/Install_First_Page.jpg?raw=true "First page of automation installation")
 
+![Install Last Page Screenshot](Screenshots/Sensor_Selection.jpg?raw=true "Sensor selection")
+
+![Authorization Screenshot](Screenshots/Permissions.jpg?raw=true "Setting device permissions")
+
+Once the automation is successfully installed you should see POST requests containing device lifecycle every time the selected sensor gets opened or closed.
+## Azure Deployment
+With the automation registered in SmartThings and tested locally on your computer, it is time to host it in the cloud. The process is the same as for any web application that is deployed to Azure. There are however several customizations and workarounds that need to be placed before successful communication between SmartThings cloud and Azure is established. This section will explain all that.
+### Create App Service
+
+### Add Application Insights
+
+### Add Key Vault Secret
+
+### Publish
+
+### Deploy Node.js Dependencies
+
+### Change Node.js Settings
+
+### Update Webhook Address
+
+1. 
 
 
 
