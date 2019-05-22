@@ -50,7 +50,7 @@ ngrok http 53869 -host-header="localhost:53869"
 ```
 3. Copy the https address. You will need it in the next section.
 ![Ngrok Screenshot](Screenshots/Ngrok.PNG?raw=true "Ngrok")
-## Register the app as an automation
+## Register the app as automation
 At this point your application is up and running but SmartThings does not know about it. In this section we will change that by creating an automation in SmartThings. The process is explained in the [Developer Workspace documentation](https://smartthings.developer.samsung.com/docs/workspace/tutorials/create-an-automation.html).
 1. Log in the [Developer Workspace](https://smartthings.developer.samsung.com/workspace/).
 2. Create automation project and open it.
