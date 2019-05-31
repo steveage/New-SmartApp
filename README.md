@@ -80,7 +80,18 @@ Once the automation is successfully installed you should see POST requests conta
 ## Azure Deployment
 With the automation registered in SmartThings and tested locally on your computer, it is time to host it in the cloud. The process is the same as for any web application that is deployed to Azure. There are however several customizations and workarounds that need to be placed before successful communication between SmartThings cloud and Azure is established. This section will explain all that. (Comming soon)
 
-### Create App Service
+### Create AzureApp Service
+Log in to your windows account in Visual Studio.
+With the solution open in Visual Studio, right click on the project file and select *Publish*. On the *Pick a publish target* window keep the default settings and click on  *Publish*.
+(screenshot here)
+On the *Create App Service* window: 
+1. enter the name of your smart app in *App Name*
+2. select your Azure subscription
+3. Create resource group by clicking on *New...*
+4. Create hosting plan by clicking on *New...*.
+5. Select Application Insights region.
+6. Click on *Create*.
+(screenshot here)
 
 ### Add Application Insights
 
