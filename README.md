@@ -83,7 +83,8 @@ With the automation registered in SmartThings and tested locally on your compute
 ### Create AzureApp Service
 Log in to your windows account in Visual Studio.
 With the solution open in Visual Studio, right click on the project file and select *Publish*. On the *Pick a publish target* window keep the default settings and click on  *Publish*.
-(screenshot here)
+![Publish 1 Screenshot](Screenshots/Publish_1.PNG?raw=true "Publish 1")
+
 On the *Create App Service* window: 
 1. enter the name of your smart app in *App Name*
 2. select your Azure subscription
@@ -91,7 +92,7 @@ On the *Create App Service* window:
 4. Create hosting plan by clicking on *New...*.
 5. Select Application Insights region.
 6. Click on *Create*.
-(screenshot here)
+![Publish 2 Screenshot](Screenshots/Publish_2.PNG?raw=true "Publish 2")
 
 ### Add Application Insights
 
