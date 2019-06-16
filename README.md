@@ -100,6 +100,7 @@ Once the app service is created and the application is published, log in to [Azu
 ### Add Application Insights
 Once published, Application Insights service should be created and set up for the web service. The APPINSIGHTS_INSTRUMENTATIONKEY setting should exist in the app configuration and information about requests, dependencies, exceptions, etc. should be automatically logged.
 ![Azure Configuration Screenshot](Screenshots/Azure_Configuration.PNG?raw=true "Azure Configuration")
+The topic is well described in [Application Insights for ASP.NET Core applications](https://docs.microsoft.com/en-us/azure/azure-monitor/app/asp-net-core).
 
 ### Add Key Vault Secret
 
