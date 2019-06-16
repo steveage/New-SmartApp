@@ -94,7 +94,12 @@ On the *Create App Service* window:
 6. Click on *Create*.
 ![Publish 2 Screenshot](Screenshots/Publish_2.PNG?raw=true "Publish 2")
 
+### Log in to Azure Portal
+Once the app service is created and the application is published, log in to [Azure Portal](https://portal.azure.com) to view the app service. Click on *All Resources* on the *Home* tab on the left and find your app service.
+
 ### Add Application Insights
+Once published, Application Insights service should be created and set up for the web service. The APPINSIGHTS_INSTRUMENTATIONKEY setting should exist in the app configuration and information about requests, dependencies, exceptions, etc. should be automatically logged.
+![Azure Configuration Screenshot](Screenshots/Azure_Configuration.PNG?raw=true "Azure Configuration")
 
 ### Add Key Vault Secret
 
